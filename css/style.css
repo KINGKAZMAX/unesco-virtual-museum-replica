@@ -655,6 +655,8 @@ main { padding-top: var(--header-h); }
   gap: 0.8rem;
 }
 
+.split .imgs figure { margin: 0; }
+
 .split .imgs img {
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -662,7 +664,37 @@ main { padding-top: var(--header-h); }
   border: 1px solid var(--line-soft);
 }
 
-.split .imgs img:nth-child(2) { transform: translateY(6%); }
+.split .imgs figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  line-height: 1.45;
+}
+
+.split .imgs figure:nth-child(2) { transform: translateY(6%); }
+
+/* Decorative full-width "breath" photo bands between sections */
+.breath {
+  position: relative;
+  height: clamp(180px, 34vw, 420px);
+  overflow: hidden;
+}
+
+.breath img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  filter: saturate(0.85);
+}
+
+.breath::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--bg) 0%, rgba(10, 14, 21, 0.25) 30%, rgba(10, 14, 21, 0.25) 70%, var(--bg) 100%);
+}
 
 .prose p { color: var(--ink-dim); margin-bottom: 1.2rem; max-width: 62ch; }
 .prose strong { color: var(--ink); font-weight: 500; }
