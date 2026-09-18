@@ -368,7 +368,14 @@ main { padding-top: var(--header-h); }
   50% { transform: scale(1.03); opacity: 1; }
 }
 
-.home-core { position: relative; text-align: center; padding: 0 1.4rem; }
+.home-core {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0 1.4rem;
+}
 
 .loading-word {
   font-family: var(--serif);

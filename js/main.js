@@ -99,7 +99,7 @@
       clearInterval(factTimer);
       if (bar) bar.style.width = "100%";
       stage.classList.add("ready");
-      document.title = document.title.replace("Loading", "UNESCO Virtual Museum of Stolen Cultural Objects");
+      document.title = "UNESCO Virtual Museum of Stolen Cultural Objects";
     }, totalMs + 400);
   }
 
